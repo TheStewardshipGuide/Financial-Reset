@@ -1,0 +1,245 @@
+/* =========================
+   GLOBAL FONT & BODY
+   ========================= */
+
+/* Palette from image:
+   --bg:        #1C1410  (deep espresso background)
+   --surface:   #2A1F17  (dark warm brown surfaces)
+   --gold:      #C9A96E  (warm candlelight gold)
+   --gold-soft: #E8C98A  (lighter gold highlight)
+   --cream:     #F5EDD8  (warm cream text / notebook)
+   --muted:     #8A7060  (muted warm taupe)
+   --accent:    #6B3F1F  (deep amber/rust accent)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Oswald:wght@200;400;700&family=Fira+Sans:wght@300;400&display=swap');
+
+:root {
+    --bg:        #F5EDD8;
+    --surface:   #EDE3CC;
+    --gold:      #C9A96E;
+    --gold-soft: #E8C98A;
+    --cream:     #F5EDD8;
+    --muted:     #8A7060;
+    --accent:    #6B3F1F;
+}
+
+body {
+    font-family: 'Oswald', Helvetica, sans-serif !important;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #2A1A0E;
+}
+
+/* =========================
+   STEP 1 HEADLINE
+   ========================= */
+#step1-headline {
+    text-align: center;
+    padding-top: 60px;
+    font-size: clamp(20px, 4vw, 40px);
+    line-height: 1.3;
+    margin: 30px 0;
+}
+
+#step1-headline .step-number {
+    font-size: 0.9em;
+    color: var(--muted);
+    font-weight: 200;
+    margin-right: 8px;
+}
+
+#step1-headline .step-text {
+    font-size: 1.2em;
+    color: var(--accent);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+}
+
+#subtext2 {
+    color: var(--muted);
+}
+
+#openModal {
+    font-size: 31px;
+    color: var(--gold);
+}
+
+/* =========================
+   VIDEO SECTION
+   ========================= */
+#video-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.video-inner {
+    width: 100%;
+    max-width: 720px;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(201, 169, 110, 0.2);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+#button-section {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 640px;
+}
+
+.custom-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 20px auto;
+    width: fit-content;
+    max-width: 300px;
+
+    padding: 12px 24px;
+    font-family: 'Oswald', Helvetica, sans-serif !important;
+
+    color: var(--cream);
+    background-color: #2A1A0E;
+
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    transition: background-color 0.25s ease;
+    box-shadow: none;
+}
+
+.custom-button:hover {
+    background-color: #3D2614;
+}
+
+#button1 {
+    font-weight: bold;
+    display: block;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+#button2 {
+    font-size: clamp(13px, 1.5vw, 15px);
+    margin-top: 5px;
+    display: block;
+    font-weight: 200;
+    color: rgba(245, 237, 216, 0.75);
+    letter-spacing: 0.04em;
+}
+
+/* =========================
+   CALENDLY SECTION
+   ========================= */
+.custom-calendly-container {
+    max-width: 800px;
+    width: 90%;
+    margin: 40px auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.calendly-heading {
+    font-size: clamp(28px, 3vw, 42px);
+    font-family: 'Cormorant Garamond', serif !important;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 0 10px 0;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+}
+
+#calendly-heading {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.calendly-subtext {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted);
+    font-family: 'Fira Sans', Helvetica, sans-serif !important;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-weight: 300;
+}
+
+.custom-calendly-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.calendly-widget-wrapper {
+    width: 100%;
+    min-height: 750px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(201, 169, 110, 0.15);
+    background-color: var(--surface);
+}
+
+.calendly-inline-widget {
+    width: 100% !important;
+    min-width: 320px !important;
+    height: 750px !important;
+    min-height: 750px !important;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media only screen and (max-width: 770px) {
+
+    .video-inner {
+        width: 100%;
+    }
+
+    .custom-button {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+
+    .custom-calendly-container {
+        width: 95%;
+    }
+
+    .calendly-subtext {
+        font-size: 16px;
+    }
+
+    .calendly-widget-wrapper {
+        min-height: 900px;
+    }
+
+    .calendly-inline-widget {
+        height: 900px !important;
+        min-height: 900px !important;
+    }
+}
